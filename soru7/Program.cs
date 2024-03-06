@@ -10,12 +10,19 @@ namespace soru7
 
             int ilkSinav = 0, ikinciSinav = 0, ucuncuSinav = 0, ortalama = 0, ogrenciSayisi = 0;
 
-            while (ogrenciSayisi < 100)
+            while (true)
             {
                 try
                 {
                     Console.Write("Notu girilecek öğrenci sayısını girin: ");
-                    ogrenciSayisi = byte.Parse(Console.ReadLine());
+                    ogrenciSayisi = int.Parse(Console.ReadLine());
+                    if (ogrenciSayisi > 100 || ogrenciSayisi < 1)
+                    {
+                        Console.Write("Hata: Geçersiz öğrenci sayısı girişi! Lütfen tekrar deneyin.");
+                        Console.ReadKey();
+                        Console.Clear();
+                        continue;
+                    }
 
                     for (int i = 0; i < ogrenciSayisi; i++)
                     {
@@ -26,7 +33,7 @@ namespace soru7
                             Console.Write("Hata: Geçersiz ad girişi! Lütfen tekrar deneyin.");
                             Console.ReadKey();
                             Console.Clear();
-                            continue;
+                            break;
                         }
 
                         Console.Write("Soyadınızı giriniz: ");
@@ -36,17 +43,38 @@ namespace soru7
                             Console.Write("Hata: Geçersiz soyad girişi! Lütfen tekrar deneyin.");
                             Console.ReadKey();
                             Console.Clear();
-                            continue;
+                            break;
                         }
 
                         Console.Write("\nİlk sınav notunuzu giriniz: ");
-                        ilkSinav = byte.Parse(Console.ReadLine());
+                        ilkSinav = int.Parse(Console.ReadLine());
+                        if (!SinirdaMi(ilkSinav))
+                        {
+                            Console.Write("Hata: Geçersiz not girişi! Lütfen tekrar deneyin.");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+                        }
 
                         Console.Write("\nİkinci sınav notunuzu giriniz: ");
-                        ikinciSinav = byte.Parse(Console.ReadLine());
+                        ikinciSinav = int.Parse(Console.ReadLine());
+                        if (!SinirdaMi(ikinciSinav))
+                        {
+                            Console.Write("Hata: Geçersiz not girişi! Lütfen tekrar deneyin.");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+                        }
 
                         Console.Write("\nÜçüncü sınav notunuzu giriniz: ");
-                        ucuncuSinav = byte.Parse(Console.ReadLine());
+                        ucuncuSinav = int.Parse(Console.ReadLine());
+                        if (!SinirdaMi(ucuncuSinav))
+                        {
+                            Console.Write("Hata: Geçersiz not girişi! Lütfen tekrar deneyin.");
+                            Console.ReadKey();
+                            Console.Clear();
+                            break;
+                        }
 
                         ortalama = (ilkSinav + ikinciSinav + ucuncuSinav) / 3;
 
@@ -72,6 +100,18 @@ namespace soru7
                 }
             }
             return true;
+        }
+
+        static bool SinirdaMi(int sayi)
+        {
+            if (sayi >= 0 && sayi <= 100)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

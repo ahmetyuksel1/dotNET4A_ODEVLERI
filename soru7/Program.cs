@@ -1,4 +1,6 @@
-﻿namespace soru7
+﻿using System.Xml.Linq;
+
+namespace soru7
 {
     internal class Program
     {
@@ -19,9 +21,23 @@
                     {
                         Console.Write("\nAdınızı giriniz: ");
                         string adi = Console.ReadLine();
+                        if (!GecerliMi(adi))
+                        {
+                            Console.Write("Hata: Geçersiz ad girişi! Lütfen tekrar deneyin.");
+                            Console.ReadKey();
+                            Console.Clear();
+                            continue;
+                        }
 
                         Console.Write("Soyadınızı giriniz: ");
                         string soyadi = Console.ReadLine();
+                        if (!GecerliMi(soyadi))
+                        {
+                            Console.Write("Hata: Geçersiz soyad girişi! Lütfen tekrar deneyin.");
+                            Console.ReadKey();
+                            Console.Clear();
+                            continue;
+                        }
 
                         Console.Write("\nİlk sınav notunuzu giriniz: ");
                         ilkSinav = byte.Parse(Console.ReadLine());
@@ -44,6 +60,18 @@
                     Console.Clear();
                 }
             }
+        }
+
+        static bool GecerliMi(string metin)
+        {
+            foreach (char karakter in metin)
+            {
+                if (char.IsDigit(karakter))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

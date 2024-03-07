@@ -39,6 +39,7 @@ namespace soru1
                     {
                         case 0:
                             Console.WriteLine($"Çıkış Yapıldı.");
+                            Environment.Exit(0);
                             break;
                         case 1:
                             Console.WriteLine($"Sipariş edilen ürün: {urunler[0]}\n");

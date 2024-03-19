@@ -5,9 +5,9 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polymorphism", "Polymorphism", "{76C63D62-5EBA-466D-9A64-EBA80552A165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ornek1", "Ornek1\Ornek1.csproj", "{F7799012-7A09-4094-B41C-D199F2A3BB48}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "soru1ornek1", "Ornek1\soru1ornek1.csproj", "{F7799012-7A09-4094-B41C-D199F2A3BB48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ornek2", "Ornek2\Ornek2.csproj", "{A54DC7B7-4B9C-45E4-BE64-A7F44DD1BBB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "soru1ornek2", "Ornek2\soru1ornek2.csproj", "{A54DC7B7-4B9C-45E4-BE64-A7F44DD1BBB2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inheritance", "Inheritance", "{2F34955A-97E5-4203-9920-BC1E49E7F499}"
 EndProject

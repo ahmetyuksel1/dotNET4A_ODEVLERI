@@ -8,6 +8,21 @@ namespace Entities
 {
     public class Users : BaseEntity
     {
+        public Users()
+        {
+            
+        }
+
+        public Users(int id, string name, string email, string phone, string address, string password)
+        {
+            Id = id;
+            Name = name;
+            Email = email;
+            Phone = phone;
+            Address = address;
+            Password = password;
+        }
+
         public string Name { get; set; }
 
         public string Email { get; set; }

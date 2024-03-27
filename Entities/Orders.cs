@@ -8,6 +8,21 @@ namespace Entities
 {
     public class Orders : BaseEntity
     {
+        public Orders()
+        {
+            
+        }
+
+        public Orders(int id, int productId, DateTime startDate, DateTime endDate, int quantity, int paymentId)
+        {
+            Id = id;
+            ProductId = productId;
+            StartDate = startDate;
+            EndDate = endDate;
+            Quantity = quantity;
+            PaymentId = paymentId;
+        }
+
         public int ProductId { get; set; }
 
         public Products Products { get; set; }
@@ -15,10 +30,6 @@ namespace Entities
         public DateTime StartDate { get; set; }
         
         public DateTime EndDate { get; set; }
-
-        //public int CustomerId { get; set; }
-
-        //public Customers Customers { get; set; }
 
         public int Quantity { get; set; }
 

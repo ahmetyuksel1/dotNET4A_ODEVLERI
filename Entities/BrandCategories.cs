@@ -8,6 +8,19 @@ namespace Entities
 {
     public class BrandCategories : BaseEntity
     {
+        public BrandCategories()
+        {
+            
+        }
+
+        public BrandCategories(int id, int brandId, string description, int categoryId)
+        {
+            Id = id;
+            BrandId = brandId;
+            Description = description;
+            CategoryId = categoryId;
+        }
+
         public int BrandId { get; set; }
 
         public virtual Brands Brands { get; set; }

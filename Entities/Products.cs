@@ -8,6 +8,21 @@ namespace Entities
 {
     public class Products : BaseEntity
     {
+        public Products()
+        {
+            
+        }
+        
+        public Products(int id, string name, int categoryId, int price, string description, int brandId)
+        {
+            Id = id;
+            Name = name;
+            CategoryId = categoryId;
+            Price = price;
+            Description = description;
+            BrandId = brandId;
+        }
+
         public string Name { get; set; }
 
         public int CategoryId { get; set; }

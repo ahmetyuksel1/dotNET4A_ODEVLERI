@@ -39,6 +39,8 @@ namespace DataAccess.Concretes.EntityFramework
             modelBuilder.Entity<BrandCategories>().Property(bc => bc.Id).UseIdentityColumn();
             modelBuilder.Entity<BrandCategories>().Property(bc => bc.Description).IsRequired(false);
             modelBuilder.Entity<BrandCategories>().Property(bc => bc.Description).HasMaxLength(200);
+            modelBuilder.Entity<BrandCategories>().HasOne(bc => bc.Brands);
+            modelBuilder.Entity<BrandCategories>().HasOne(bc => bc.Categories);
 
             modelBuilder.Entity<Brands>().HasKey(b => b.Id);
             modelBuilder.Entity<Brands>().Property(b => b.Id).UseIdentityColumn();
@@ -57,6 +59,7 @@ namespace DataAccess.Concretes.EntityFramework
 
             modelBuilder.Entity<Payments>().HasKey(p => p.Id);
             modelBuilder.Entity<Payments>().Property(p => p.Id).UseIdentityColumn();
+            modelBuilder.Entity<Payments>().HasOne(p => p.PaymentTypes);
 
             modelBuilder.Entity<PaymentTypes>().HasKey(pt => pt.Id);
             modelBuilder.Entity<PaymentTypes>().Property(pt => pt.Id).UseIdentityColumn();
@@ -65,6 +68,7 @@ namespace DataAccess.Concretes.EntityFramework
             modelBuilder.Entity<Products>().Property(p => p.Id).UseIdentityColumn();
             modelBuilder.Entity<Products>().Property(p => p.Description).IsRequired(false);
             modelBuilder.Entity<Products>().Property(p => p.Description).HasMaxLength(200);
+            modelBuilder.Entity<Products>().HasOne(p => p.Categories);
 
             modelBuilder.Entity<Users>().HasKey(u => u.Id);
             modelBuilder.Entity<Users>().Property(u => u.Id).UseIdentityColumn();

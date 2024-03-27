@@ -8,6 +8,17 @@ namespace Entities
 {
     public class PaymentTypes : BaseEntity
     {
+        public PaymentTypes()
+        {
+            
+        }
+        
+        public PaymentTypes(int id, string paymentType)
+        {
+            Id = id;
+            PaymentType = paymentType;
+        }
+
         public string PaymentType { get; set; }
     }
 }

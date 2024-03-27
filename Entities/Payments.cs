@@ -12,9 +12,9 @@ namespace Entities
 
         public Orders Orders { get; set; }
 
-        public int Amount { get; set; }
+        public double TotalPrice { get; set; }
 
-        public string Status { get; set; }
+        public bool Status { get; set; }
 
         public int PaymentTypeId { get; set; }
 

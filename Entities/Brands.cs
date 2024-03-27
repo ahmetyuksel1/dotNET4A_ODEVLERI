@@ -8,7 +8,7 @@ namespace Entities
 {
     public class Brands : BaseEntity
     {
-        public string BrandName { get; set; }
+        public string Name { get; set; }
 
         public string Description { get; set; }
     }

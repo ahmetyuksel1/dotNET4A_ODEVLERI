@@ -16,11 +16,11 @@ namespace Entities
         
         public DateTime EndDate { get; set; }
 
-        public int CustomerId { get; set; }
+        //public int CustomerId { get; set; }
 
-        public Customers Customers { get; set; }
+        //public Customers Customers { get; set; }
 
-        public int Total { get; set; }
+        public int Quantity { get; set; }
 
         public int PaymentId { get; set; }
 

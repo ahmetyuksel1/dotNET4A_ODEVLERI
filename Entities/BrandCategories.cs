@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class BrandCategory : BaseEntity
+    public class BrandCategories : BaseEntity
     {
         public int BrandId { get; set; }
 

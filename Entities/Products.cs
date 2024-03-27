@@ -13,10 +13,6 @@ namespace Entities
         public int CategoryId { get; set; }
 
         public virtual Categories Categories { get; set; }
-        
-        public int InventoryId { get; set; }
-
-        public virtual Inventories Inventories { get; set; }
 
         public int Price { get; set; }
 
